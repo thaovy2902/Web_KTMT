@@ -1,0 +1,275 @@
+html 
+{
+    scroll-behavior: smooth;
+}
+body 
+{
+    font-family: Bahnschrift Light;
+    font-size: 18px;
+}
+p
+{
+    font-size: 14px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] 
+{
+    width: 100%;
+    font-family: Bahnschrift Light;
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+    
+    /* Set a style for all buttons */
+button 
+{
+    font-family: Bahnschrift Light;
+    font-size: 18px;
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    
+}
+    
+button:hover 
+{
+    opacity: 0.7;
+}
+    
+    /* Extra styles for the cancel button */
+.cancelbtn 
+{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336; 
+    margin: auto 0% auto 80%;
+    width: 20%;  
+}
+h2
+{
+    padding-top: 2%;
+    text-align: center;
+} 
+.imgcontainer 
+{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+    
+img.avatar 
+{
+    width: 14%;
+    border-radius: 50%;
+}
+    
+.container 
+{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 16px;
+}
+    
+span.psw 
+{
+    float: right;
+    padding-top: 16px;
+    
+}
+    
+    /* The Modal (background) */
+.modal 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+    
+    /* Modal Content/Box */
+.modal-content 
+{
+    box-shadow: 0px 0px 20px rgb(116, 116, 116);
+    border-radius: 16px;
+    background-color: #fefefe;
+    margin: 5% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 0px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Bahnschrift Light;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+#main {
+}
+.header1 {
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 50px;
+    font-weight: bold;
+}
+#header {
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav,
+.subnav {
+    list-style-type: none;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#header .user-option {
+    cursor: pointer;
+    padding: 0 20px;
+}
+#nav .nav-arrow-down {
+    font-size: 16px;
+}
+#header .user-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#content {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: center;
+    position: fixed;
+    top: 150px;
+    right: 50%;
+    z-index: 1;
+}
+.bienso {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: center;
+    position: fixed;
+    top: 150px;
+    right: 50%;
+    z-index: 1;
+}
+.moreif {
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+    
+    /* Add Zoom Animation */
+.animate 
+{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+    
+@-webkit-keyframes animatezoom 
+{
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom 
+{
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+    
+    /* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) 
+{
+    span.psw 
+    {
+        display: block;
+        float: none;
+    }
+    .cancelbtn 
+    {
+        width: 100%;
+    }
+}

@@ -1,0 +1,207 @@
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-size: 14px;
+}
+body {
+    font-family: Bahnschrift Light;
+    font-size: 16px;
+}
+
+h2 
+{
+    text-align: center;
+    padding-bottom: 1%;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0% 10% 0% 10%;
+}
+th {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    padding: 8px;
+}
+td {
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 8px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header1 {
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header1 a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    font-size: 50px;
+}
+#header {
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav,
+.subnav {
+    list-style-type: none;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#header .user-option {
+    cursor: pointer;
+    padding: 0 20px;
+}
+#nav .nav-arrow-down {
+    font-size: 16px;
+}
+#header .user-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#content {
+    padding-top: 100px;
+}
+.bienso {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: center;
+    position: fixed;
+    top: 150px;
+    right: 50%;
+    z-index: 1;
+}
+.moreif {
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+button[name="Update"] 
+{
+    font-size: 16px;
+    width: 80px;
+    padding: 3px;
+}
+button[name="add"] 
+{
+    font-size: 16px;
+    width: 80px;
+    padding: 3px;
+    margin: 0% 150% 1% 85%;
+    color: #000000;
+    background-color: #ffffff;
+}
+button[name="del"] 
+{
+    font-size: 16px;
+    width: 80px;
+    padding: 3px;
+    margin: 1% 10% 0% 10%;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+input[name="info"] 
+{
+    font-family: Bahnschrift Light;
+    font-size: 16px;
+    width: 80%;
+    margin: 0% 70% 0% 30%;
+    padding: 3px;
+}
+input[name="search"] 
+{
+    font-size: 16px;
+    width: 80%;
+    padding: 3px;
+    margin: 0% 74% 0% 26%;
+    color: #000000;
+    background-color: #ffffff;
+}
+input:hover 
+{
+    opacity: 0.7;
+}
+.nav-plus 
+{
+    font-size: 35px;
+    position: absolute;
+    right: 10%;
+    top: 200px;
+}
+.nav-plus:hover {
+    background-color: antiquewhite;
+    border-radius: 20px;
+}

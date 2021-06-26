@@ -1,0 +1,26 @@
+{
+    "name": "admin/firebase",
+    "description": "PHP Tutorial",
+    "type": "project",
+    "license": "GNU3",
+    "autoload": {
+        "psr-4": {
+            "Admin\\Firebase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thaovy2902",
+            "email": "thaovyduong2902@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.15",
+        "php":">=7.2.0",
+        "ahsankhatri/firestore-php": "^2.0",
+        "grpc/grpc": "1.38",
+        "google/cloud": "dev-master",
+        "morrislaptop/firestore-php": "^2.2"
+    }
+}

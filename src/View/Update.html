@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="../assets/css/Updatecss.css">
+    <link rel="stylesheet" href="../assets/font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="header1">
+            <a href="./Page.html">CDTV</a>
+            <p>Vehicle Monitoring System</p>
+        </div>
+        <div id="header">
+
+            <ul id="nav">
+                <li>
+                    <a href="">
+                        Menu
+                        <i class="nav-arrow-down ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="./MemberList.html">Member List</a></li>
+                        <li><a href="./VehicleManagement.html">Vehicle Management</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="user-option">
+                <ul id="nav">
+                    <li>
+                        <a href="./ChangePassword.html">
+                            Change Password
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Login.html">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+                <i class="user-icon ti-user"></i>
+            </div>
+
+        </div>
+        <div id="content">
+            <center>
+                <h2>
+                    UPDATE INFORMATION
+                </h2>
+                <form action="../Controller/Chen.php" method="POST">
+                    <table>
+                        <tr>
+                            <td>Car ID:</td>
+                            <td><input type="text" name="id"></td>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td>Car Plate:</td>
+                            <td><input type="text" name="plate"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="update" value="Update">
+                                <button name="cancel"> Back</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </center>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
