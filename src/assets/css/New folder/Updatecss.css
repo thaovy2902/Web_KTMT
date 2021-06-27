@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-size: 14px;
+}
+body {
+    font-family: Bahnschrift Light;
+    font-size: 16px;
+}
+h2 {
+    text-align: center;
+    padding-bottom: 1%;
+}
+table 
+{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    border-style: hidden;
+    
+}
+th {
+    border-style: hidden;
+    background-color: #000000;
+
+    text-align: center;
+    color: #ffffff;
+}
+td {
+    font-size: 18px;
+    padding: 5px;
+    border-style: hidden;
+    background-color: #ffffff;
+    text-align: left;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header1 {
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header1 a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    font-size: 50px;
+}
+#header {
+    height: 46px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav,
+.subnav {
+    list-style-type: none;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+#header .user-option {
+    cursor: pointer;
+    padding: 0 20px;
+}
+#nav .nav-arrow-down {
+    font-size: 16px;
+}
+#header .user-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#content {
+    padding-top: 3%;
+}
+
+.moreif {
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+button,
+input[type="submit"] 
+{
+    font-size: 16px;
+    width: 49%;
+    padding: 3px;
+    color: #ffffff;
+    background-color: #000000;
+}
+input:hover 
+{
+    opacity: 0.7;
+}
+button:hover 
+{
+    opacity: 0.7;
+}
+input[type="text"] 
+{
+    font-size: 16px;
+    font-family: Bahnschrift Light;
+    padding: 3px;
+    width: 100%;
+}
+.container 
+{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding: 16px;
+}
+    /* The Modal (background) */
+.modal 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+    /* Modal Content/Box */
+.modal-content 
+{
+    box-shadow: 0px 0px 20px rgb(116, 116, 116);
+    border-radius: 16px;
+    background-color: #fefefe;
+    margin: 5% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 0px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate 
+{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom 
+{
+    from 
+    {
+        -webkit-transform: scale(0);
+    }
+    to 
+    {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes animatezoom 
+{
+    from 
+    {
+        transform: scale(0);
+    }
+    to 
+    {
+        transform: scale(1);
+    }
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) 
+{
+    span.psw 
+    {
+        display: block;
+        float: none;
+    }
+    .cancelbtn 
+    {
+        width: 100%;      
+    }
+}
