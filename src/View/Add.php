@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
 </head>
 
 <body>
@@ -69,34 +71,20 @@
                   <div class="form-group row">
                       <label for="plate" class="col-sm-2 col-form-label">Car Plate</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" required id="Plate" name="plate" placeholder="Car Plate">
+                          <input type="text" class="form-control" required id="Plate" name="plate" placeholder="Car Plate (Ex: 43A1234)">
                       </div>
                   </div>
                   <div class="form-group row">
                       <label for="id" class="col-sm-2 col-form-label">Card ID</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" required id="id" name="id" placeholder="Card ID">
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                      <label for="id" class="col-sm-2 col-form-label">Time In</label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control" readonly value="<?php
-                      use Google\Cloud\Core\Timestamp;
-                      $stamp = new Timestamp(new DateTime());
-                      echo date('H:i:s d-m-y',strtotime($stamp));
-                      ?>">
+                          <input type="number" class="form-control" required id="id" name="id" placeholder="Card ID">
                       </div>
                   </div>
                   <input type="hidden" name="paking" value="true">
-                  <input type="hidden" name="time_in" value="<?php
-                  $stamp = new Timestamp(new DateTime());
-                  echo $stamp;
-                  ?>">
-                  <input type="hidden" name="time_out" value="">
                 <div class="form-group row">
                     <div class="col-sm-10 offset-sm-2">
                         <button type="submit" name="add" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn btn-danger" onclick="javascript:history.go(-1)">Back</button>
                     </div>
                 </div>
       </form>

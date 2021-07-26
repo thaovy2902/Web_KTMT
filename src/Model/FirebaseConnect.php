@@ -17,7 +17,9 @@ class FirestoreDB{
     }
 
     public function getDocument(string $id){
-        return $this->db->collection($this->dbname)->document($id)->snapshot()->data();
+        $Ref = $this->db->collection($this->dbname);
+        $document = $Ref->document($id)->snapshot()->data();
+        return $document;
     }
     public function getAllMember(){
         $Ref = $this->db->collection($this->dbname);
@@ -64,7 +66,7 @@ class FirestoreDB{
         $a= $this->db->collection($this->dbname)->document("$docID")->delete();
         return $a;
     }
-    public function update($name,$cardid,$plate_old,$plate_new,$paking,$time_in,$time_out){
+    public function update($name,$cardid,$plate_old,$plate_new,$paking){
         $Ref = $this->db->collection($this->dbname);
         $query = $Ref->where('Car_plate', '=', "$plate_old");
         $document = $query->documents();
@@ -77,19 +79,15 @@ class FirestoreDB{
             'CardID' => $cardid,
             'Member_name' => $name,
             'Paking' => $paking,
-            'Time_In' => $time_in,
-            'Time_Out' => $time_out
         ];
         $this->db->collection($this->dbname)->document("$docID")->set($data);
     }
-    public function add($name,$cardid,$plate,$paking,$time_in,$time_out){
+    public function add($name,$cardid,$plate,$paking){
         $data = [
             'Car_plate' => $plate,
             'CardID' => $cardid,
             'Member_name' => $name,
-            'Paking' => $paking,
-            'Time_In' => $time_in,
-            'Time_Out' => $time_out
+            'Paking' => $paking
         ];
         $this->db->collection($this->dbname)->add($data);
     }

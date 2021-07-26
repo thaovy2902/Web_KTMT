@@ -107,10 +107,16 @@
                 }
                 echo "</TD>";
                 echo "<TD>";
-                echo date('H:i:s d-m-y',strtotime($member['Time_In']));
+                $timezone  = 6;
+                echo date('H:i:s d-m-y',strtotime($member['Time_In']) - 3600*($timezone+date("H")));
                 echo "</TD>";
                 echo "<TD>";
-                echo date('H:i:s d-m-y',strtotime($member['Time_Out']));
+                if (isset($member['Time_Out'])) {
+                  echo date('H:i:s d-m-y',strtotime($member['Time_Out']) - 3600*($timezone+date("H")));
+                }
+                else {
+                  echo " ";
+                }
                 echo "</TD>";
             echo "</TR>";
               $count=$count+1;

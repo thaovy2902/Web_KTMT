@@ -1,6 +1,6 @@
 <?php
 include_once("../Model/FirebaseConnect.php");
-
+use Google\Cloud\Core\Timestamp;
 class  Ctrl_Member
 {
 	public function invoke(){
@@ -8,8 +8,9 @@ class  Ctrl_Member
             $modelMember =  new FirestoreDB();
             $check = $modelMember->check_add($_POST['plate']);
             if (!$check){
-                $member = $modelMember->add($_POST['name'],$_POST['id'],$_POST['plate'],$_POST['paking'],$_POST['time_in'],$_POST['time_out']);
-                include_once("../View/Add.php");
+                $member = $modelMember->add($_POST['name'],$_POST['id'],$_POST['plate'],$_POST['paking']);
+                $memberList = $modelMember->getAllMember();
+			    include_once("../View/MemberList.php");
                 echo '<script type="text/javascript">';
                 echo ' alert("Successfully")';
                 echo '</script>';
@@ -19,6 +20,7 @@ class  Ctrl_Member
                 echo '<script type="text/javascript">';
                 echo ' alert("Failed! License Plate Already Exists")';
                 echo '</script>';
+                include_once("../View/Add.php");
             }
         }
         else include_once("../View/Add.php");

@@ -79,20 +79,13 @@
                   <div class="form-group row">
                       <label for="id" class="col-sm-2 col-form-label">Card ID</label>
                       <div class="col-sm-10">
-                          <input type="text" class="form-control" required id="id" name="id" value="<?php echo $id; ?>">
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                      <label for="id" class="col-sm-2 col-form-label">Time In</label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control" readonly value="<?php
-                      echo date('H:i:s d-m-y',strtotime($timein));
-                      ?>">
+                          <input type="number" class="form-control" required id="id" name="id" value="<?php echo $id; ?>">
                       </div>
                   </div>
                 <div class="form-group row">
                     <div class="col-sm-10 offset-sm-2">
                         <button type="submit" name="submit" class="btn btn-primary">Update</button>
+                        <a href="../Controller/MemberController.php" class="btn btn-danger">Back</a>
                     </div>
                 </div>
       </form>

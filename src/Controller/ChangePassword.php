@@ -1,9 +1,11 @@
 <?php
-include_once("../Model/FirebaseConnect.php");
+include_once("../Model/User.php");
 
 class  Ctrl_Member
 {
 	public function invoke(){
+		$modelUser =  new Model_User();
+		$check = $modelUser->check_password($_POST['username'],$_POST['current']);
         if (isset($_POST['change'])){
 
             $modelMember =  new FirestoreDB();

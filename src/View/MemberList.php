@@ -109,9 +109,13 @@
                     echo "<input type=hidden name='plate_old' value='".$member['Car_plate']."'>";
                     echo "<input type=hidden name='name' value='".$member['Member_name']."'>";
                     echo "<input type=hidden name='id' value='".$member['CardID']."'>";
-                    echo "<input type=hidden name='time_in' value='".$member['Time_In']."'>";
+                    if (isset($member['Time_In'])){
+                      echo "<input type=hidden name='time_in' value='".$member['Time_In']."'>";
+                    }
+                    if (isset($member['Time_Out'])){
+                      echo "<input type=hidden name='time_out' value='".$member['Time_Out']."'>";
+                    }
                     echo "<input type=hidden name='paking' value='".$member['Paking']."'>";
-                    echo "<input type=hidden name='time_out' value='".$member['Time_Out']."'>";
                     echo "<input type='submit' name='update' class='btn btn-primary' value='Update' style='margin-left:10px'></input>";
                     echo "</form>";
                 echo "</TD>";

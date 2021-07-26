@@ -92,10 +92,6 @@
                     <td> <button type="submit" name="change">Change Password</button></td>
                     </tr>
                 </table>
-            
-            
-
-
             <div style="background-color:#f1f1f1">
                 <button type="button" onclick="document.getElementById('id01').reset()"
                     class="cancelbtn">Cancel</button>

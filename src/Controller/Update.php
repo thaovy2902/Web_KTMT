@@ -8,12 +8,13 @@ class  Ctrl_Member
             $modelMember =  new FirestoreDB();
             $check = $modelMember->check_add($_POST['plate']);
             if (!$check){
-                $member = $modelMember->update($_POST['name'],$_POST['id'],$_POST['old_plate'],$_POST['plate'],$_POST['paking'],$_POST['time_in'],$_POST['time_out']);
+                $member = $modelMember->update($_POST['name'],$_POST['id'],$_POST['old_plate'],$_POST['plate'],$_POST['paking']);
+
+                $memberList = $modelMember->getAllMember();
+			    include_once("../View/MemberList.php");
                 echo '<script type="text/javascript">';
                 echo ' alert("Successfully")';
                 echo '</script>';
-                $memberList = $modelMember->getAllMember();
-			    include_once("../View/MemberList.php");
 
             }
             else {
@@ -27,8 +28,6 @@ class  Ctrl_Member
             $name= $_POST['name'];
             $id= $_POST['id'];
             $plate= $_POST['plate_old'];
-            $timein= $_POST['time_in'];
-            $timeout= $_POST['time_out'];
             $paking= $_POST['paking'];
             include_once("../View/UpdateForm.php");
         } 
